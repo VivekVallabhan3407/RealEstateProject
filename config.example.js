@@ -1,2 +1,2 @@
 // config.js
-export const apiKey = 'your-actual-api-key';
+export const apiKey = 'your-api-key';
