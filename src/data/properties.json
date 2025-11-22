@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "name": "Skyline Residency",
+    "city": "Mumbai",
+    "price": "₹1.2 Cr",
+    "type": "buy",
+    "image": "project_img_1",
+    "description": "Premium 2BHK located in Andheri West."
+  },
+  {
+    "id": 2,
+    "name": "Marine View Homes",
+    "city": "Mumbai",
+    "price": "₹55,000/month",
+    "type": "rent",
+    "image": "project_img_2",
+    "description": "Sea-facing apartment near Marine Drive."
+  },
+
+  {
+    "id": 3,
+    "name": "Whitefield Heights",
+    "city": "Bengaluru",
+    "price": "₹95 Lakh",
+    "type": "buy",
+    "image": "project_img_3",
+    "description": "Modern 3BHK apartment in Whitefield."
+  },
+  {
+    "id": 4,
+    "name": "Tech Park Residency",
+    "city": "Bengaluru",
+    "price": "₹42,000/month",
+    "type": "rent",
+    "image": "project_img_4",
+    "description": "Close to IT parks, ideal for tech professionals."
+  },
+
+  {
+    "id": 5,
+    "name": "Gachibowli Greens",
+    "city": "Hyderabad",
+    "price": "₹80 Lakh",
+    "type": "buy",
+    "image": "project_img_5",
+    "description": "Spacious family home near Financial District."
+  },
+  {
+    "id": 6,
+    "name": "Hitech City Apartments",
+    "city": "Hyderabad",
+    "price": "₹35,000/month",
+    "type": "rent",
+    "image": "project_img_6",
+    "description": "Premium rental located near Hitech City Metro."
+  },
+
+  {
+    "id": 7,
+    "name": "DLF Park Tower",
+    "city": "Delhi",
+    "price": "₹1.35 Cr",
+    "type": "buy",
+    "image": "project_img_1",
+    "description": "Luxury 3BHK in South Delhi."
+  },
+  {
+    "id": 8,
+    "name": "Rohini Residency",
+    "city": "Delhi",
+    "price": "₹28,000/month",
+    "type": "rent",
+    "image": "project_img_2",
+    "description": "Affordable rental housing in Rohini Sector 11."
+  },
+
+  {
+    "id": 9,
+    "name": "Salt Lake Villas",
+    "city": "Kolkata",
+    "price": "₹70 Lakh",
+    "type": "buy",
+    "image": "project_img_3",
+    "description": "Stylish villa in Salt Lake City."
+  },
+  {
+    "id": 10,
+    "name": "Ballygunge Apartments",
+    "city": "Kolkata",
+    "price": "₹30,000/month",
+    "type": "rent",
+    "image": "project_img_4",
+    "description": "Family-friendly rental near Ballygunge Phari."
+  },
+
+  {
+    "id": 11,
+    "name": "Viman Nagar Suites",
+    "city": "Pune",
+    "price": "₹85 Lakh",
+    "type": "buy",
+    "image": "project_img_5",
+    "description": "Prime location near Phoenix Mall."
+  },
+  {
+    "id": 12,
+    "name": "Kothrud Comfort Homes",
+    "city": "Pune",
+    "price": "₹32,000/month",
+    "type": "rent",
+    "image": "project_img_6",
+    "description": "Peaceful locality ideal for families."
+  },
+
+  {
+    "id": 13,
+    "name": "Bodakdev Gardens",
+    "city": "Ahmedabad",
+    "price": "₹95 Lakh",
+    "type": "buy",
+    "image": "project_img_1",
+    "description": "Elegant home in Bodakdev prime area."
+  },
+  {
+    "id": 14,
+    "name": "Thaltej Residency",
+    "city": "Ahmedabad",
+    "price": "₹27,000/month",
+    "type": "rent",
+    "image": "project_img_2",
+    "description": "Affordable rental near Thaltej Circle."
+  },
+
+  {
+    "id": 15,
+    "name": "Civil Lines Estate",
+    "city": "Jaipur",
+    "price": "₹78 Lakh",
+    "type": "buy",
+    "image": "project_img_3",
+    "description": "Beautiful home near Civil Lines."
+  },
+  {
+    "id": 16,
+    "name": "Malviya Nagar Residency",
+    "city": "Jaipur",
+    "price": "₹22,000/month",
+    "type": "rent",
+    "image": "project_img_4",
+    "description": "Spacious rental in Malviya Nagar."
+  },
+
+  {
+    "id": 17,
+    "name": "Sector 17 Towers",
+    "city": "Chandigarh",
+    "price": "₹1.1 Cr",
+    "type": "buy",
+    "image": "project_img_5",
+    "description": "Luxury condo in Sector 17."
+  },
+  {
+    "id": 18,
+    "name": "Mohali Residences",
+    "city": "Chandigarh",
+    "price": "₹26,000/month",
+    "type": "rent",
+    "image": "project_img_6",
+    "description": "Affordable 2BHK near Mohali Stadium."
+  },
+
+  {
+    "id": 19,
+    "name": "T Nagar Elite Homes",
+    "city": "Chennai",
+    "price": "₹92 Lakh",
+    "type": "buy",
+    "image": "project_img_1",
+    "description": "2BHK close to T Nagar shopping zone."
+  },
+  {
+    "id": 20,
+    "name": "Velachery Flats",
+    "city": "Chennai",
+    "price": "₹33,000/month",
+    "type": "rent",
+    "image": "project_img_2",
+    "description": "Well-connected property near Velachery."
+  }
+]
