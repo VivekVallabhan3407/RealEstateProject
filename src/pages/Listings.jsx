@@ -1,7 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import propertyListings from "../data/properties.json";
 import { assets } from "../assets/assets.js";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import FilterBar from "../components/FilterBar.jsx";
+
+const parseNumeric = (priceStr) => {
+  if (!priceStr) return 0;
+  // remove non-digits, handle "₹", commas, "Lakh", "Cr", "/month"
+  const cleaned = priceStr
+    .replace(/₹/g, "")
+    .replace(/,/g, "")
+    .replace(/\/month/g, "")
+    .toLowerCase()
+    .trim();
+
+  // handle Lakh and Cr conversions
+  if (cleaned.includes("cr")) {
+    const num = parseFloat(cleaned.replace(/cr/g, "").trim()) || 0;
+    return num * 10000000; // 1 Cr = 1e7
+  }
+  if (cleaned.includes("lakh")) {
+    const num = parseFloat(cleaned.replace(/lakh/g, "").trim()) || 0;
+    return num * 100000; // 1 Lakh = 1e5
+  }
+  // plain number
+  const num = parseFloat(cleaned) || 0;
+  return num;
+};
 
 const Listings = () => {
   const location = useLocation();
@@ -10,6 +35,16 @@ const Listings = () => {
   const type = query.get("type");     // buy / rent
   const city = query.get("location"); // optional city
 
+  const [filters, setFilters] = useState({
+    type: type || "",
+    city: "",
+    minPrice: "",
+    maxPrice: "",
+    sort: "",
+  });
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
   const [filtered, setFiltered] = useState([]);
 
   useEffect(() => {
@@ -27,18 +62,64 @@ const Listings = () => {
       );
     }
 
-    setFiltered(result);
-  }, [type, city]);
 
+    if (filters.type && !type) {
+      result = result.filter((p) => p.type === filters.type);
+    }
+
+    if (filters.city) {
+      result = result.filter((p) => p.city === filters.city);
+    }
+
+    const min = parseNumeric(filters.minPrice);
+    const max = parseNumeric(filters.maxPrice);
+
+    if (min) {
+      result = result.filter((p) => parseNumeric(p.price) >= min);
+    }
+
+    if (max) {
+      result = result.filter((p) => parseNumeric(p.price) <= max);
+    }
+
+    // === SORTING ===
+    if (filters.sort === "price_asc") {
+      result = [...result].sort(
+        (a, b) => parseNumeric(a.price) - parseNumeric(b.price)
+      );
+    } else if (filters.sort === "price_desc") {
+      result = [...result].sort(
+        (a, b) => parseNumeric(b.price) - parseNumeric(a.price)
+      );
+    }
+
+    setFiltered(result);
+    setCurrentPage(1);
+  }, [type, city, filters]);
+
+  const totalPages = Math.ceil(filtered.length / itemsPerPage);
+
+  const currentData = filtered.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
   return (
     <div className="pt-28 px-4 md:px-20">
       <h1 className="text-3xl font-bold mb-6">Available Properties</h1>
+
+      {/* TEMP- will show the filters later*/}
+      <FilterBar
+        showType={!type}   // Hide Type filter if user came from homepage search
+        currentFilters={filters}
+        onChange={setFilters}
+        properties={propertyListings}
+      />
 
       {filtered.length === 0 ? (
         <p className="text-gray-500">No properties found.</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filtered.map((item) => (
+          {currentData.map((item) => (
             <div
               key={item.id}
               className="shadow-lg rounded-lg overflow-hidden bg-white"
@@ -59,6 +140,39 @@ const Listings = () => {
           ))}
         </div>
       )}
+
+      {/* PAGINATION */}
+      <div className="flex justify-center mt-10 gap-2">
+
+        <button
+          onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+          disabled={currentPage === 1}
+          className="px-4 py-2 border rounded disabled:opacity-50"
+        >
+          Prev
+        </button>
+
+        {[...Array(totalPages)].map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentPage(idx + 1)}
+            className={`px-4 py-2 border rounded 
+             ${currentPage === idx + 1 ? "bg-blue-500 text-white" : ""}`}
+          >
+            {idx + 1}
+          </button>
+        ))}
+
+        <button
+          onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
+          disabled={currentPage === totalPages}
+          className="px-4 py-2 border rounded disabled:opacity-50"
+        >
+          Next
+        </button>
+
+      </div>
+
     </div>
   );
 };
