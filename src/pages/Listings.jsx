@@ -32,6 +32,7 @@ const Listings = () => {
   const location = useLocation();
   const query = new URLSearchParams(location.search);
 
+  const navigate = useNavigate();
   const type = query.get("type");     // buy / rent
   const city = query.get("location"); // optional city
 
@@ -136,6 +137,15 @@ const Listings = () => {
                 <p className="text-blue-600 font-bold mt-2">{item.price}</p>
                 <p className="text-sm text-gray-600 mt-1">{item.description}</p>
               </div>
+            
+              <button
+                onClick={() => navigate(`/property/${item.id}`)}
+                className="mt-3 px-4 py-2 bg-blue-600 text-white rounded w-full"
+              >
+                View Details
+              </button>
+
+
             </div>
           ))}
         </div>

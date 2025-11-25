@@ -38,10 +38,12 @@ function App() {
         {/* LISTINGS PAGE ROUTE */}
         <Route path="/properties" element={<Listings />} />
 
-        {/* DETAILS PAGE ROUTE */}
-        <Route path="/properties/:id" element={<PropertyDetails />} />
 
         <Route path="/listings" element={<Listings />} />
+
+        
+        {/* DETAILS PAGE ROUTE */}
+        <Route path="/property/:id" element={<PropertyDetails />} />
 
       </Routes>
     </BrowserRouter>
