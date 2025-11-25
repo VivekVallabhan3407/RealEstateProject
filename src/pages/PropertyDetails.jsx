@@ -4,11 +4,12 @@ import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 import propertyListings from "../data/properties.json";
 import { ToastContainer, toast } from "react-toastify";
 import { assets } from "../assets/assets.js";
+import ContactModal from "../components/ContactModal.jsx";
 
 const PropertyDetails = () => {
   const { id } = useParams();
   const [wishList, setWishList] = useState([]);
-
+  const [contactOpen,setContactOpen]=useState(false);
   const property = propertyListings.find((p) => p.id === Number(id));
 
 
@@ -53,7 +54,8 @@ const PropertyDetails = () => {
 
       {/* Contact Section */}
       <div className="flex items-center justify-between mt-6">
-        <button className="bg-blue-500 text-white px-6 py-2 rounded">
+        <button className="bg-blue-500 text-white px-6 py-2 rounded"
+        onClick={()=>setContactOpen(true)}>
           Contact Seller
         </button>
 
@@ -67,7 +69,7 @@ const PropertyDetails = () => {
       </div>
 
       <ToastContainer position="top-right" />
-
+      <ContactModal open={contactOpen} onClose={()=>setContactOpen(false)} property={property}/>
     </div>
   );
 };
