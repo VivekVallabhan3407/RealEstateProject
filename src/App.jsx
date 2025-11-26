@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import './index.css'
 import Header from './components/Header';
@@ -9,8 +9,12 @@ import Testimonials from './components/Testimonials';
 import Listings from "./pages/Listings";
 import PropertyDetails from "./pages/PropertyDetails";
 import Contact from './components/Contact';
+import Wishlist from "./pages/Wishlist";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 
-import { ToastContainer} from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/Footer';
 
@@ -30,7 +34,6 @@ function App() {
   );
 
   return (
-    <BrowserRouter>
       <Routes>
         {/* HOME PAGE ROUTE */}
         <Route path="/" element={<Home />} />
@@ -41,12 +44,16 @@ function App() {
 
         <Route path="/listings" element={<Listings />} />
 
-        
+
         {/* DETAILS PAGE ROUTE */}
         <Route path="/property/:id" element={<PropertyDetails />} />
 
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+
       </Routes>
-    </BrowserRouter>
   );
 }
 
