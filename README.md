@@ -36,6 +36,13 @@ RealEstateProject/
 │       └── AuthContext.jsx
 │   ├── data
 │       └── proeprties.json
+│   ├── pages
+│       ├── Listings.jsx
+│       ├── Login.jsx
+│       ├── Profile.jsx
+│       ├── PropertyDetails.jsx
+│       ├── Signup.jsx
+│       └── Wishlist.jsx
 │   ├── App.cs
 │   ├── App.tsx
 │   ├── index.cs
