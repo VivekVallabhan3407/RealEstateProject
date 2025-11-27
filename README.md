@@ -49,3 +49,26 @@ RealEstateProject/
 │   └── main.tsx
 └── index.html
 ```
+
+## 🛠️ Getting Started
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/<your-username>/jsonflow.git
+cd jsonflow
+```
+
+### 2️⃣ Install dependencies
+```bash
+npm install
+
+```
+
+### 3️⃣ Run the project
+```bash
+npm run dev
+
+```
+
+## Future Scope
+
