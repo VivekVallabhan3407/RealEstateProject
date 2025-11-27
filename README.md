@@ -17,3 +17,28 @@ This is a Real Estate Project that is made using ReactJs and Tailwind CSS. This 
 - **Notifications**: React Toastify
 
 
+## 📂 Project Structure:
+
+```
+RealEstateProject/
+├── src/
+│   ├── components
+│       ├── About.jsx
+│       ├── Contact.jsx
+│       ├── ContactModal.jsx
+│       ├── FilterBar.jsx
+│       ├── Footer.jsx
+│       ├── Header.jsx
+│       ├── Navbar.jsx
+│       ├── Projects.jsx
+│       └── Testimonials.jsx
+│   ├── context
+│       └── AuthContext.jsx
+│   ├── data
+│       └── proeprties.json
+│   ├── App.cs
+│   ├── App.tsx
+│   ├── index.cs
+│   └── main.tsx
+└── index.html
+```
