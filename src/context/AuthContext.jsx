@@ -35,8 +35,24 @@ export const AuthProvider = ({ children }) => {
 
     };
 
+    const updateProfile = (updatedData) => {
+        const existing = JSON.parse(localStorage.getItem("user")) || user;
+
+        const newUser = {
+            ...existing,
+            ...updatedData
+        };
+
+        // Save both “registered user” and “currently logged in user”
+        localStorage.setItem("user", JSON.stringify(newUser));
+        localStorage.setItem("loggedInUser", JSON.stringify(newUser));
+
+        setUser(newUser);
+    };
+
+
     return (
-        <AuthContext.Provider value={{ user, login, signup, logout }}>
+        <AuthContext.Provider value={{ user, login, signup, logout, updateProfile }}>
             {children}
         </AuthContext.Provider>
     );
