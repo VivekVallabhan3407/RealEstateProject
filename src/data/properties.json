@@ -6,7 +6,9 @@
     "price": "₹1.2 Cr",
     "type": "buy",
     "image": "project_img_1",
-    "description": "Premium 2BHK located in Andheri West."
+    "description": "Premium 2BHK located in Andheri West.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
   {
     "id": 2,
@@ -15,7 +17,9 @@
     "price": "₹55,000/month",
     "type": "rent",
     "image": "project_img_2",
-    "description": "Sea-facing apartment near Marine Drive."
+    "description": "Sea-facing apartment near Marine Drive.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
 
   {
@@ -25,7 +29,9 @@
     "price": "₹95 Lakh",
     "type": "buy",
     "image": "project_img_3",
-    "description": "Modern 3BHK apartment in Whitefield."
+    "description": "Modern 3BHK apartment in Whitefield.",
+    "propertyType": "Apartment",
+    "bedrooms": 3
   },
   {
     "id": 4,
@@ -34,7 +40,9 @@
     "price": "₹42,000/month",
     "type": "rent",
     "image": "project_img_4",
-    "description": "Close to IT parks, ideal for tech professionals."
+    "description": "Close to IT parks, ideal for tech professionals.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
 
   {
@@ -44,7 +52,9 @@
     "price": "₹80 Lakh",
     "type": "buy",
     "image": "project_img_5",
-    "description": "Spacious family home near Financial District."
+    "description": "Spacious family home near Financial District.",
+    "propertyType": "Villa",
+    "bedrooms": 3
   },
   {
     "id": 6,
@@ -53,7 +63,9 @@
     "price": "₹35,000/month",
     "type": "rent",
     "image": "project_img_6",
-    "description": "Premium rental located near Hitech City Metro."
+    "description": "Premium rental located near Hitech City Metro.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
 
   {
@@ -62,8 +74,10 @@
     "city": "Delhi",
     "price": "₹1.35 Cr",
     "type": "buy",
-    "image": "project_img_1",
-    "description": "Luxury 3BHK in South Delhi."
+       "image": "project_img_1",
+    "description": "Luxury 3BHK in South Delhi.",
+    "propertyType": "Condo",
+    "bedrooms": 3
   },
   {
     "id": 8,
@@ -72,7 +86,9 @@
     "price": "₹28,000/month",
     "type": "rent",
     "image": "project_img_2",
-    "description": "Affordable rental housing in Rohini Sector 11."
+    "description": "Affordable rental housing in Rohini Sector 11.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
 
   {
@@ -82,7 +98,9 @@
     "price": "₹70 Lakh",
     "type": "buy",
     "image": "project_img_3",
-    "description": "Stylish villa in Salt Lake City."
+    "description": "Stylish villa in Salt Lake City.",
+    "propertyType": "Villa",
+    "bedrooms": 4
   },
   {
     "id": 10,
@@ -91,7 +109,9 @@
     "price": "₹30,000/month",
     "type": "rent",
     "image": "project_img_4",
-    "description": "Family-friendly rental near Ballygunge Phari."
+    "description": "Family-friendly rental near Ballygunge Phari.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
 
   {
@@ -101,7 +121,9 @@
     "price": "₹85 Lakh",
     "type": "buy",
     "image": "project_img_5",
-    "description": "Prime location near Phoenix Mall."
+    "description": "Prime location near Phoenix Mall.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
   {
     "id": 12,
@@ -110,7 +132,9 @@
     "price": "₹32,000/month",
     "type": "rent",
     "image": "project_img_6",
-    "description": "Peaceful locality ideal for families."
+    "description": "Peaceful locality ideal for families.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
 
   {
@@ -120,7 +144,9 @@
     "price": "₹95 Lakh",
     "type": "buy",
     "image": "project_img_1",
-    "description": "Elegant home in Bodakdev prime area."
+    "description": "Elegant home in Bodakdev prime area.",
+    "propertyType": "Villa",
+    "bedrooms": 4
   },
   {
     "id": 14,
@@ -129,7 +155,9 @@
     "price": "₹27,000/month",
     "type": "rent",
     "image": "project_img_2",
-    "description": "Affordable rental near Thaltej Circle."
+    "description": "Affordable rental near Thaltej Circle.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
 
   {
@@ -139,7 +167,9 @@
     "price": "₹78 Lakh",
     "type": "buy",
     "image": "project_img_3",
-    "description": "Beautiful home near Civil Lines."
+    "description": "Beautiful home near Civil Lines.",
+    "propertyType": "Villa",
+    "bedrooms": 3
   },
   {
     "id": 16,
@@ -148,7 +178,9 @@
     "price": "₹22,000/month",
     "type": "rent",
     "image": "project_img_4",
-    "description": "Spacious rental in Malviya Nagar."
+    "description": "Spacious rental in Malviya Nagar.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
 
   {
@@ -158,7 +190,9 @@
     "price": "₹1.1 Cr",
     "type": "buy",
     "image": "project_img_5",
-    "description": "Luxury condo in Sector 17."
+    "description": "Luxury condo in Sector 17.",
+    "propertyType": "Condo",
+    "bedrooms": 3
   },
   {
     "id": 18,
@@ -167,7 +201,9 @@
     "price": "₹26,000/month",
     "type": "rent",
     "image": "project_img_6",
-    "description": "Affordable 2BHK near Mohali Stadium."
+    "description": "Affordable 2BHK near Mohali Stadium.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
 
   {
@@ -177,7 +213,9 @@
     "price": "₹92 Lakh",
     "type": "buy",
     "image": "project_img_1",
-    "description": "2BHK close to T Nagar shopping zone."
+    "description": "2BHK close to T Nagar shopping zone.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   },
   {
     "id": 20,
@@ -186,6 +224,8 @@
     "price": "₹33,000/month",
     "type": "rent",
     "image": "project_img_2",
-    "description": "Well-connected property near Velachery."
+    "description": "Well-connected property near Velachery.",
+    "propertyType": "Apartment",
+    "bedrooms": 2
   }
 ]
