@@ -1,11 +1,11 @@
 import React, { useMemo } from "react";
 
 function FilterBar({ showType = true, currentFilters = {}, onChange, properties = [] }) {
-  
+
   // generate unique sorted cities
   const cities = useMemo(() => {
     const s = new Set();
-    properties.forEach((p) => s.add(p.city));   
+    properties.forEach((p) => s.add(p.city));
     return Array.from(s).sort();
   }, [properties]);
 
@@ -53,6 +53,39 @@ function FilterBar({ showType = true, currentFilters = {}, onChange, properties 
           ))}
         </select>
       </div>
+
+      {/* Bedrooms Filter */}
+      <div className="flex items-center gap-2">
+        <label className="text-sm font-medium mr-2">Bedrooms</label>
+        <select
+          value={currentFilters.bedrooms || ""}
+          onChange={(e) => handle("bedrooms", e.target.value)}
+          className="border rounded px-3 py-2"
+        >
+          <option value="">Any</option>
+          <option value="1">1 BHK</option>
+          <option value="2">2 BHK</option>
+          <option value="3">3 BHK</option>
+          <option value="4">4+ BHK</option>
+        </select>
+      </div>
+
+      {/* Property Type Filter */}
+      <div className="flex items-center gap-2">
+        <label className="text-sm font-medium mr-2">Property Type</label>
+        <select
+          value={currentFilters.propertyType || ""}
+          onChange={(e) => handle("propertyType", e.target.value)}
+          className="border rounded px-3 py-2"
+        >
+          <option value="">Any</option>
+          <option value="Apartment">Apartment</option>
+          <option value="Villa">Villa</option>
+          <option value="House">House</option>
+          <option value="Condo">Condo</option>
+        </select>
+      </div>
+
 
       <div className="flex items-center gap-2">
         <label className="text-sm font-medium mr-2">Price (min)</label>
