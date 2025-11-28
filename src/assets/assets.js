@@ -16,6 +16,7 @@ import project_img_6 from './project_img_6.jpg'
 import profile_img_1 from './profile_img_1.png'
 import profile_img_2 from './profile_img_2.png'
 import profile_img_3 from './profile_img_3.png'
+import no_property_found from './no_property_found.png'
 
 export const assets = {
     logo,
@@ -31,6 +32,7 @@ export const assets = {
     project_img_4,
     project_img_5,
     project_img_6,
+    no_property_found,
     left_arrow,
     right_arrow,
 }
