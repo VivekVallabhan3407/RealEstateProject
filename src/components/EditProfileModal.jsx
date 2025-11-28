@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 const EditProfileModal = ({ open, onClose, onSave, user }) => {
     if (!open) return null;
@@ -8,10 +9,20 @@ const EditProfileModal = ({ open, onClose, onSave, user }) => {
         email: user.email
     });
 
+    useEffect(() => {
+        setForm({
+            name: user.name,
+            email: user.email
+        });
+    }, [user]);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         onSave(form);
-        onClose();
+        toast.success("Profile updated successfully!", { autoClose: 1500 });
+        setTimeout(() => {
+            onClose();
+        }, 100);
     };
 
     return (

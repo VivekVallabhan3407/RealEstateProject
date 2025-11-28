@@ -1,13 +1,23 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
+import EditProfileModal from "../components/EditProfileModal.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets.js";
 import propertyListings from "../data/properties.json";
+import {toast} from "react-toastify";
 
 const Profile = () => {
-    const { user, logout } = useContext(AuthContext);
+    const { user, logout, updateProfile } = useContext(AuthContext);
+    const [editOpen, setEditOpen] = useState(false);
     const [recent, setRecent] = useState([]);
     const navigate = useNavigate();
+
+    
+    useEffect(() => {
+        const viewed = JSON.parse(localStorage.getItem("recentViews")) || [];
+        const last3 = viewed.slice(-3).reverse();
+        setRecent(last3);
+    }, []);
 
     // 🚨 SAFETY: Avoid crash if user is null during first renders
     if (!user) {
@@ -26,11 +36,6 @@ const Profile = () => {
         );
     }
 
-    useEffect(() => {
-        const viewed = JSON.parse(localStorage.getItem("recentViews")) || [];
-        const last3 = viewed.slice(-3).reverse();
-        setRecent(last3);
-    }, []);
 
     return (
         <div className="pt-32 px-4 max-w-3xl mx-auto">
@@ -51,6 +56,14 @@ const Profile = () => {
                     >
                         View Wishlist
                     </Link>
+
+                    <button
+                        onClick={() => setEditOpen(true)}
+                        className="bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700"
+                    >
+                        Edit Profile
+                    </button>
+
 
                     <button
                         onClick={logout}
@@ -96,6 +109,15 @@ const Profile = () => {
                     </div>
                 )}
             </div>
+
+            <EditProfileModal
+                open={editOpen}
+                onClose={()=>setEditOpen(false)}
+                user={user}
+                onSave={(data)=>{
+                    updateProfile(data);
+                }}
+            />
         </div>
     );
 };
