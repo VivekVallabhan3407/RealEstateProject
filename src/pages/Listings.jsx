@@ -117,8 +117,14 @@ const Listings = () => {
       />
 
       {filtered.length === 0 ? (
-        <p className="text-gray-500">No properties found.</p>
-      ) : (
+        <div className="flex flex-col items-center justify-center py-16 text-gray-500">
+          <img
+            src={assets.no_property_found}
+            alt="No Property"
+            className="w-100 h-80 opacity-70 mb-4"
+          />
+          <p className="text-lg font-medium">No property found for this filter</p>
+        </div>) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {currentData.map((item) => (
             <div
@@ -137,7 +143,7 @@ const Listings = () => {
                 <p className="text-blue-600 font-bold mt-2">{item.price}</p>
                 <p className="text-sm text-gray-600 mt-1">{item.description}</p>
               </div>
-            
+
               <button
                 onClick={() => navigate(`/property/${item.id}`)}
                 className="mt-3 px-4 py-2 bg-blue-600 text-white rounded w-full"
