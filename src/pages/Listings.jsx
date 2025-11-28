@@ -72,6 +72,22 @@ const Listings = () => {
       result = result.filter((p) => p.city === filters.city);
     }
 
+    // Filter by bedrooms
+    if (filters.bedrooms) {
+      result = result.filter(p => {
+        if (filters.bedrooms === "4") return p.bedrooms >= 4;
+        return p.bedrooms == filters.bedrooms;
+      });
+    }
+
+    // Filter by property type
+    if (filters.propertyType) {
+      result = result.filter(p =>
+        p.propertyType.toLowerCase() === filters.propertyType.toLowerCase()
+      );
+    }
+
+
     const min = parseNumeric(filters.minPrice);
     const max = parseNumeric(filters.maxPrice);
 
