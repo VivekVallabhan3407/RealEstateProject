@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 import propertyListings from "../data/properties.json";
-import { ToastContainer, toast } from "react-toastify";
+import {  toast } from "react-toastify";
 import { assets } from "../assets/assets.js";
 import ContactModal from "../components/ContactModal.jsx";
 
@@ -94,7 +94,6 @@ const PropertyDetails = () => {
         </button>
       </div>
 
-      <ToastContainer position="top-right" />
       <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} property={property} />
     </div>
   );
