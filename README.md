@@ -98,3 +98,11 @@ All rights reserved.
 You are not allowed to copy, modify, share, or redistribute any part of this project in any form without explicit written permission from the author.
 
 This project is provided for viewing and personal reference only.
+
+## Acknowledgement
+
+- React.js documentation
+
+- React Router
+
+- Tailwind CSS
