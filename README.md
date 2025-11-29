@@ -8,8 +8,12 @@ This is a Real Estate Project that is made using ReactJs and Tailwind CSS. This 
 - **Project Showcase**: Display completed real estate projects using image cards.
 - **Contact**: Users can easily contact agents through contact form.
 - **Clean UI**: A modern and clean user interface for easy navigation.
+- **Wishlist**: User can save their selected properties to a wihslist for future reference.
+- **Pagination**: Add pagination for property listings for better viewing experience.
+- **Profile Updation**: Users can update their profiles using edit profile option. 
 - **Animations**: Smooth and engaging animations using Framer Motion to enhance the user experience.
 - **Notifications**: Real-time notifications using React Toastify to inform users about form submissions and other actions.
+
 
 ## Tech Stack
 - **Frontend**: HTML, CSS, JavaScript, ReactJS, Tailwind CSS
