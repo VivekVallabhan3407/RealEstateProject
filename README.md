@@ -30,6 +30,7 @@ RealEstateProject/
 │       ├── About.jsx
 │       ├── Contact.jsx
 │       ├── ContactModal.jsx
+│       ├── EditProfileModal.jsx
 │       ├── FilterBar.jsx
 │       ├── Footer.jsx
 │       ├── Header.jsx
