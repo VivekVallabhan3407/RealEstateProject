@@ -86,3 +86,15 @@ npm run dev
 4. Advanced Search with Suggestions: Implement search suggestions using city names, locations, or property names as the user types.
 
 5. Admin Dashboard (Basic): Add an admin panel to create, edit, and delete property listings easily.
+
+
+## 📄 License
+
+This project, RealEstate Project, is licensed under “All Rights Reserved.”
+
+Copyright © 2025 Vivek Vallabhan
+All rights reserved.
+
+You are not allowed to copy, modify, share, or redistribute any part of this project in any form without explicit written permission from the author.
+
+This project is provided for viewing and personal reference only.
