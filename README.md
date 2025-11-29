@@ -77,16 +77,12 @@ npm run dev
 
 ## Future Scope
 
-1. Filter Enhancements: Add more advanced filters such as number of bedrooms, property size, furnished/unfurnished, or nearby amenities.
+1. Multiple Images per Property: Convert each property to support a gallery of images instead of a single photo.
 
-2. Multiple Images per Property: Convert each property to support a gallery of images instead of a single photo.
+2. Wishlist Sync After Login: Save the wishlist to a backend or cloud database so it stays consistent across devices.
 
-3. Wishlist Sync After Login: Save the wishlist to a backend or cloud database so it stays consistent across devices.
+3. Contact Form Integration: Connect the “Contact Seller” form to an email service (like EmailJS or a backend API) to send real enquiries.
 
-4. Contact Form Integration: Connect the “Contact Seller” form to an email service (like EmailJS or a backend API) to send real enquiries.
+4. Advanced Search with Suggestions: Implement search suggestions using city names, locations, or property names as the user types.
 
-5. Advanced Search with Suggestions: Implement search suggestions using city names, locations, or property names as the user types.
-
-6. Admin Dashboard (Basic): Add an admin panel to create, edit, and delete property listings easily.
-
-7. User Profile Editing: Allow users to update their name, email, and password directly from the profile page.
+5. Admin Dashboard (Basic): Add an admin panel to create, edit, and delete property listings easily.
