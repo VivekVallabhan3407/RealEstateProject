@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MortgageCalculator = () => {
   const [price, setPrice] = useState("");
@@ -6,6 +7,8 @@ const MortgageCalculator = () => {
   const [rate, setRate] = useState("");
   const [years, setYears] = useState("");
   const [result, setResult] = useState(null);
+
+  const navigate=useNavigate();
 
   const calculateEMI = () => {
     const loanAmount = price - downPayment;
