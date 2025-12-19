@@ -1,6 +1,6 @@
 # Real Estate Project
 
-This is a Real Estate Project that is made using ReactJs and Tailwind CSS. This project aims to provide a seamless and intuitive experience for users looking to buy or rent properties. With a clean and modern user interface, users can easily browse through various real estate listings, view property details, and contact  for more information. They can save their selected properties to wishlist for future reference. For every action of user, toast notifications are shown for giving proper feedback to user that every action is either successful or failed.
+This is a Real Estate Project that is made using ReactJs and Tailwind CSS. This project aims to provide a seamless and intuitive experience for users looking to buy or rent properties. With a clean and modern user interface, users can easily browse through various real estate listings, view property details, and contact  for more information. They can save their selected properties to wishlist for future reference. Users have a option to check how much mortgage/rent they have to pay for rent of a property using built-in, easy-to-use calculator. For every action of user, toast notifications are shown for giving proper feedback to user that every action is either successful or failed.
 
 
 ## Features
