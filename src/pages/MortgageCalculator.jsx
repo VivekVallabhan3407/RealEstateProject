@@ -7,10 +7,24 @@ const MortgageCalculator = () => {
     const [rate, setRate] = useState("");
     const [years, setYears] = useState("");
     const [result, setResult] = useState(null);
+    const [error,setError]=useState("");
 
     const navigate = useNavigate();
 
     const calculateEMI = () => {
+        setError("");
+        if(!price || !downPayment || !rate || !years){
+            setError("Please fill in all fields.");
+            return;
+        }
+        if(Number(price)<=0 || Number(downPayment)<0 || Number(rate)<=0 || Number(years)<=0){
+            setError("Please enter valid positive numbers.");
+            return;
+        }
+        if(Number(downPayment)>=Number(price)){
+            setError("Down Payment should be less than Property Price.");
+            return;
+        }
         const loanAmount = price - downPayment;
         const monthlyRate = rate / (12 * 100);
         const months = years * 12;
