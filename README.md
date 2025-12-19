@@ -12,6 +12,7 @@ This is a Real Estate Project that is made using ReactJs and Tailwind CSS. This 
 - **Pagination**: Add pagination for property listings for better viewing experience.
 - **Profile Updation**: Users can update their profiles using edit profile option. 
 - **Animations**: Smooth and engaging animations using Framer Motion to enhance the user experience.
+- **Mortgage Calculator**: Calculator for checking how much rent would be required to give by user. Can be used by both user and onwer of proeprty.
 - **Notifications**: Real-time notifications using React Toastify to inform users about form submissions and other actions.
 
 
