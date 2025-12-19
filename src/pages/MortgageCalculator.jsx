@@ -1,5 +1,6 @@
 import React, { use, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {toast} from 'react-toastify';
 
 const MortgageCalculator = () => {
     const [price, setPrice] = useState("");
