@@ -45,6 +45,7 @@ RealEstateProject/
 │   ├── pages
 │       ├── Listings.jsx
 │       ├── Login.jsx
+│       ├── MortgageCalculator.jsx
 │       ├── Profile.jsx
 │       ├── PropertyDetails.jsx
 │       ├── Signup.jsx
