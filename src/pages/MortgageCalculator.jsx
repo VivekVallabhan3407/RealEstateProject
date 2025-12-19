@@ -57,8 +57,6 @@ const MortgageCalculator = () => {
         setYears("");
         setResult(null);
         setError("");
-        toast.info("Calculator reset");
-
     }
 
     return (
