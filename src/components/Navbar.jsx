@@ -26,6 +26,7 @@ const Navbar = () => {
           <a href="#About" className="cursor-pointer hover:text-gray-400">About</a>
           <a href="#Projects" className="cursor-pointer hover:text-gray-400">Projects</a>
           <Link to="/listings" className="cursor-pointer hover:text-gray-400">Listings</Link>
+          <Link to="/mortgage" className="cursor-pointer hover:text-gray-400">Mortgage Calculator</Link>
           <a href="#Testimonials" className="cursor-pointer hover:text-gray-400">Testimonials</a>
         </ul>
 
