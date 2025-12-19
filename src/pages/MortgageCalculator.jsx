@@ -136,25 +136,28 @@ const MortgageCalculator = () => {
 
                 {/* Secondary Actions */}
                 <div className="flex justify-between mt-4">
+                    {/* Reset Button */}
                     <button
                         onClick={handleReset}
                         disabled={!price && !downPayment && !rate && !years && !result}
-                        className={`px-6 py-2 rounded-lg border transition
-            ${!price && !downPayment && !rate && !years && !result
-                                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                                : "border-gray-300 text-gray-700 hover:bg-gray-100"
+                        className={`px-6 py-2 rounded-lg font-medium transition
+      ${!price && !downPayment && !rate && !years && !result
+                                ? "bg-red-100 text-red-300 cursor-not-allowed"
+                                : "bg-red-500 text-white hover:bg-red-600"
                             }`}
                     >
                         Reset
                     </button>
 
+                    {/* Back Button */}
                     <button
                         onClick={() => navigate("/")}
-                        className="px-6 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+                        className="px-6 py-2 rounded-lg font-medium bg-slate-700 text-white hover:bg-slate-800 transition"
                     >
                         Back to Home
                     </button>
                 </div>
+
             </div>
         </div>
     );
