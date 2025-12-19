@@ -46,6 +46,8 @@ const MortgageCalculator = () => {
             totalInterest: totalInterest.toFixed(2),
             totalPayable: totalPayable.toFixed(2),
         });
+        toast.success("EMI calculated successfully");
+
     };
 
     const handleReset = () => {
@@ -55,6 +57,8 @@ const MortgageCalculator = () => {
         setYears("");
         setResult(null);
         setError("");
+        toast.info("Calculator reset");
+
     }
 
     return (
