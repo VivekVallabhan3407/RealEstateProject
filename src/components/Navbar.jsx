@@ -148,6 +148,11 @@ const Navbar = () => {
             Listings
           </Link>
 
+          <Link to="/mortgage" className="hover:text-blue-600">
+            Mortgage Calculator
+          </Link>
+
+
           <a
             href="#Testimonials"
             onClick={() => setShowMobileMenu(false)}
