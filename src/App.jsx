@@ -16,6 +16,7 @@ import Wishlist from "./pages/Wishlist";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import MortgageCalculator from './pages/MortgageCalculator';
 
 import Footer from './components/Footer';
 
@@ -49,7 +50,7 @@ function App() {
 
         {/* DETAILS PAGE ROUTE */}
         <Route path="/property/:id" element={<PropertyDetails />} />
-
+        <Route path="/mortgage" element={<MortgageCalculator />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
