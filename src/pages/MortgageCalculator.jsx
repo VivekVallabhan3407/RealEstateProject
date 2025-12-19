@@ -53,6 +53,7 @@ const MortgageCalculator = () => {
         setRate("");
         setYears("");
         setResult(null);
+        setError("");
     }
 
     return (
