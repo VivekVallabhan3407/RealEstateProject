@@ -108,3 +108,5 @@ This project is provided for viewing and personal reference only.
 - React Router
 
 - Tailwind CSS
+
+- React Toast Notifications
